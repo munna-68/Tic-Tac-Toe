@@ -6,30 +6,37 @@
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>Tic Tac Toe</nav>
+  <div class="container">
+    <nav>Tic Tac Toe</nav>
 
-  <div class="player-choice-container">
-    <h2>Choose A Side</h2>
-  
-    <div class="choose-player">X</div>
-    <div class="choose-player">Y</div>
+    <div class="player-choice-container">
+      <h2>Choose A Side</h2>
+      
+      <div class="choose-player-container">
+          <div class="choose-player">X</div>
+          <div class="choose-player">Y</div>
+      </div>
+    </div>
+
+    <div class="game-board">
+      <div id="cell-1-1" class="cell"></div>
+      <div id="cell-1-2" class="cell"></div>
+      <div id="cell-1-3" class="cell"></div>
+
+      <div id="cell-2-1" class="cell"></div>
+      <div id="cell-2-2" class="cell"></div>
+      <div id="cell-2-3" class="cell"></div>
+
+      <div id="cell-3-1" class="cell"></div>
+      <div id="cell-3-2" class="cell"></div>
+      <div id="cell-3-3" class="cell"></div>
+    </div>
+
   </div>
-
-  <div class="game-board">
-    <div id="cell-1-1" class="cell"></div>
-    <div id="cell-1-2" class="cell"></div>
-    <div id="cell-1-3" class="cell"></div>
-
-    <div id="cell-2-1" class="cell"></div>
-    <div id="cell-2-2" class="cell"></div>
-    <div id="cell-2-3" class="cell"></div>
-
-    <div id="cell-3-1" class="cell"></div>
-    <div id="cell-3-2" class="cell"></div>
-    <div id="cell-3-3" class="cell"></div>
-  </div>
-
 </body>
 </html>

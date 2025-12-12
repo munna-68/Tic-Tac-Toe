@@ -1,0 +1,71 @@
+/* Basic CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Actual Style */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 85vw;
+}
+
+nav {
+  font-family: 'Fredoka';
+  font-weight: 700;
+  font-size: 3rem;
+  color: #FF4C4B;
+}
+
+h2 {
+  font-family: 'Fredoka';
+  font-weight: 400;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 6rem auto 5rem auto;
+}
+
+.choose-player {
+  background-color: #FFCA28;
+  font-family: 'Fredoka';
+  font-weight: 700;
+  font-size: 16rem;
+  color: #FF4C4B;
+  border-radius: 1.25rem;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+}
+
+.choose-player-container {
+  display: flex;
+  gap: 180px;
+  justify-content: space-evenly;
+}
