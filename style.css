@@ -129,3 +129,9 @@ color: #FFCA28;
   background-color: #FFD860;
   color: #DD4746;
 }
+
+.selected:hover {
+background-color: #FF4C4B;
+color: #FFCA28;
+ 
+}
