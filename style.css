@@ -68,15 +68,17 @@ h2 {
 .choose-player-container {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
 
-.player-choice-conatiner {
+.player-choice-container {
   position: absolute;
-
+  width: 100%;
+  height: 100%;
 }
 
 .hidden {
- display: none;
+ display: none !important;
 }
 
 .game-container {
