@@ -2,8 +2,23 @@ const gameBordCell = document.querySelectorAll('.cell')
 
 
 
+let clickCounter = 1;
+let currentPlayer;
+
+function checkCurrentPlayer() {
+  if (clickCounter % 2 === 0) {
+  currentPlayer = "Y"
+} else {
+  currentPlayer = "X"
+}
+}
+
+
 gameBordCell.forEach( cell => { cell.addEventListener("click", () => {
   cell.classList.toggle('selected');
+  checkCurrentPlayer()
+  cell.textContent = currentPlayer;
+  clickCounter++
 })});
 
 
