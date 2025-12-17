@@ -1,3 +1,12 @@
+const gameBordCell = document.querySelectorAll('.cell')
+
+
+
+gameBordCell.forEach( cell => { cell.addEventListener("click", () => {
+  cell.classList.toggle('selected');
+})});
+
+
 let gameBord = ["Y", "Y", "Y", "", "", "", "", "", ""]
 let winningIndexes = {
   row1:  [0, 1, 2],

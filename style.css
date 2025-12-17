@@ -72,9 +72,9 @@ h2 {
 }
 
 .player-choice-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+position: absolute;
+width: 100%;
+height: 100%;
 }
 
 .hidden {
@@ -82,10 +82,10 @@ h2 {
 }
 
 .game-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell {
@@ -102,14 +102,30 @@ h2 {
 }
 
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 600px;
-    height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 600px;
+  height: 600px;
 }
 
 .game-board-container {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+}
+
+.selected {
+background-color: #FF4C4B;
+color: #FFCA28;
+
+}
+
+.winning {
+background-color: #4BFF4C;
+color: #FFCA28;
+}
+
+.cell:hover {
+  background-color: #FFD860;
+  color: #DD4746;
 }
