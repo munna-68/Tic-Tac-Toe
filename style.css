@@ -42,6 +42,7 @@ nav {
   font-weight: 700;
   font-size: 3rem;
   color: #FF4C4B;
+  margin: 20px 0px;
 }
 
 h2 {
@@ -49,7 +50,7 @@ h2 {
   font-weight: 400;
   font-size: 2.2rem;
   text-align: center;
-  margin: 6rem auto 5rem auto;
+  margin: 5rem auto 4rem auto;
 }
 
 .choose-player {
@@ -66,6 +67,47 @@ h2 {
 
 .choose-player-container {
   display: flex;
-  gap: 180px;
   justify-content: space-evenly;
+}
+
+.player-choice-conatiner {
+  position: absolute;
+
+}
+
+.hidden {
+ display: none;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+  background-color: #FFCA28;
+  font-family: 'Fredoka';
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 1;
+  color: #FF4C4B;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 600px;
+    height: 600px;
+}
+
+.game-board-container {
+  display: flex;
+  justify-content: center;
 }
