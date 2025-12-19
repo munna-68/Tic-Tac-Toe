@@ -12,11 +12,12 @@ let winningIndexes = {
 
 
 const gameBordCell = document.querySelectorAll('.cell')
-
+const winningText =  document.querySelector('.winning-text')
 
 
 let clickCounter = 1;
 let currentPlayer;
+let gameOver;
 
 function checkCurrentPlayer() {
   if (clickCounter % 2 === 0) {
@@ -28,6 +29,7 @@ function checkCurrentPlayer() {
 
 
 gameBordCell.forEach( cell => { cell.addEventListener("click", () => {
+  if (gameOver) return;
   cell.classList.toggle('selected');
   checkCurrentPlayer()
   cell.textContent = currentPlayer;
@@ -81,7 +83,8 @@ function playTic(arr) {
   winningIndexes.diag1.every(i => arr[i] === "X")||
   winningIndexes.diag2.every(i => arr[i] === "X")
   ) {
-    console.log("winner is X")
+    winningText.textContent = "winner is X";
+    gameOver = 1
   } if (winningIndexes.row1.every(i => arr[i] === "Y") ||
   winningIndexes.row2.every(i => arr[i] === "Y") ||
   winningIndexes.row3.every(i => arr[i] === "Y") ||
@@ -91,7 +94,7 @@ function playTic(arr) {
   winningIndexes.diag1.every(i => arr[i] === "Y")||
   winningIndexes.diag2.every(i => arr[i] === "Y")
 ) {
-  console.log("winner is Y")
-  
+  winningText.textContent = "winner is Y";
+  gameOver = 1
 } }
 
