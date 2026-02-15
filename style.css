@@ -7,7 +7,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -16,16 +17,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -34,34 +48,34 @@ p, h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 85vw;
+  width: min(85vw, 1200px);
 }
 
 nav {
-  font-family: 'Fredoka';
+  font-family: "Fredoka";
   font-weight: 700;
-  font-size: 3rem;
-  color: #FF4C4B;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #ff4c4b;
   margin: 20px 0px;
 }
 
 h2 {
-  font-family: 'Fredoka';
+  font-family: "Fredoka";
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 4.5vw, 2.2rem);
   text-align: center;
   margin: 5rem auto 4rem auto;
 }
 
 .choose-player {
-  background-color: #FFCA28;
-  font-family: 'Fredoka';
+  background-color: #ffca28;
+  font-family: "Fredoka";
   font-weight: 700;
-  font-size: 16rem;
-  color: #FF4C4B;
+  font-size: clamp(5rem, 20vw, 16rem);
+  color: #ff4c4b;
   border-radius: 1.25rem;
-  width: 400px;
-  height: 400px;
+  width: min(40vw, 400px);
+  height: min(40vw, 400px);
   text-align: center;
 }
 
@@ -72,13 +86,13 @@ h2 {
 }
 
 .player-choice-container {
-position: absolute;
-width: 100%;
-height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .hidden {
- display: none !important;
+  display: none !important;
 }
 
 .game-container {
@@ -89,12 +103,12 @@ height: 100%;
 }
 
 .cell {
-  background-color: #FFCA28;
-  font-family: 'Fredoka';
+  background-color: #ffca28;
+  font-family: "Fredoka";
   font-weight: 700;
-  font-size: 8rem;
+  font-size: clamp(2.6rem, 14vw, 8rem);
   line-height: 1;
-  color: #FF4C4B;
+  color: #ff4c4b;
   border: 1px solid black;
   display: flex;
   justify-content: center;
@@ -105,33 +119,52 @@ height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 600px;
-  height: 600px;
+  width: min(90vw, 600px);
+  height: min(90vw, 600px);
 }
 
 .game-board-container {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .selected {
-background-color: #FF4C4B;
-color: #FFCA28;
-
+  background-color: #ff4c4b;
+  color: #ffca28;
 }
 
 .winning {
-background-color: #4BFF4C;
-color: #FFCA28;
+  background-color: #4bff4c;
+  color: #ffffff;
 }
 
-.cell:hover {
-  background-color: #FFD860;
-  color: #DD4746;
+.cell:not(.selected):not(.winning):hover {
+  background-color: #ffd860;
+  color: #dd4746;
 }
 
-.selected:hover {
-background-color: #FF4C4B;
-color: #FFCA28;
- 
+@media (max-width: 768px) {
+  body {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 94vw;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  h2 {
+    margin: 1.8rem auto 1.2rem auto;
+  }
 }
